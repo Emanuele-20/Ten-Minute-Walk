@@ -1,9 +1,15 @@
 function walk(directions){
+
+    const timesOfNorth = directions.filter(word => word ==="n")
+    const timeOfSouth = directions.filter(word => word ==="s")
+    const timeOfWest = directions.filter(word => word ==="w")
+    const timeOfEast = directions.filter(word => word ==="e")
+
     if (directions.length !== 10 ){
         return false
-    } else if (((directions.filter(word => word ==="n").length) == (directions.filter(word => word ==="s").length)) && ((directions.filter(word => word ==="w").length) == (directions.filter(word => word ==="e").length))){
+    } else if ((timesOfNorth.length == timeOfSouth.length) && (timeOfWest.length == timeOfEast.length)){
         return true
-    } else if (((directions.filter(word => word ==="n").length) !== (directions.filter(word => word ==="s").length)) || ((directions.filter(word => word ==="w").length) !== (directions.filter(word => word ==="e").length))){
+    } else if ((timesOfNorth.length !== timeOfSouth.length) || (timeOfWest.length !== timeOfEast.length)){
         return false
     }
 }
