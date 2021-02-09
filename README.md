@@ -31,4 +31,4 @@ ten_minute_walk?(['w', 's']) # => false
 
 
 ## Class/Methods
-walk()
+isTenMinuteWalk(directions)
